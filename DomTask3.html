@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+    body{
+        background-color: aquamarine;
+    }
+    #stopLight{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  border-style: solid;
+    }
+  #readyLight{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  border-style: solid;
+    }
+    #goLight{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  display: inline-block;
+  border-style: solid;
+    }
+    .card{
+      height:300px;
+        width:300px;
+        margin:200px;
+        margin:40px 40px 40px 40px ;
+        margin-left:467px;
+        background-color: blueviolet;
+    }
+    h2{
+      font-size:90px;
+      text-align: center;
+    }
+ </style>
+    </head>
+<body>
+<div>
+<h2>Traffic Light</h2>
+        <div class="card" >
+          <span id="one1"></span>
+          <div class="card-body">
+     <div>
+        <div class="row">
+        <div class="col"><p id="stopLight"></p></div>
+        <div class="col"><button class="btn1" id="stopbutton" onclick="stop()"><h1>Stop</h1></button> </div>  
+      </div>
+      <div>
+        <div class="row">
+        <div class="col"><p id="readyLight"></p></div>
+        <div class="col"><button class ="btn2" id="readybutton" onclick="wait()"><h1>Wait</h1></button> </div>  
+      </div>
+      <div>
+        <div class="row">
+        <div class="col"><p id="goLight"></p></div>
+        <div class="col"><button class="btn3" id="gobutton" onclick="go()"><h1>Go</h1></button> </div>  
+      </div>
+    </div>
+  </div>
+
+</div>
+<script>
+function stop(){
+   document.getElementById("stopbutton").style.backgroundColor="red"
+   document.getElementById("stopLight").style.backgroundColor="red"
+   document.getElementById("readybutton").style.backgroundColor="grey"
+   document.getElementById("readyLight").style.backgroundColor="grey"
+   document.getElementById("gobutton").style.backgroundColor="grey"
+   document.getElementById("goLight").style.backgroundColor="grey"
+}
+function wait(){
+  document.getElementById("readybutton").style.backgroundColor="yellow"
+   document.getElementById("readyLight").style.backgroundColor="yellow"
+   document.getElementById("gobutton").style.backgroundColor="grey"
+   document.getElementById("goLight").style.backgroundColor="grey"
+   document.getElementById("stopbutton").style.backgroundColor="grey"
+   document.getElementById("stopLight").style.backgroundColor="grey"
+   
+}
+function go(){
+  document.getElementById("gobutton").style.backgroundColor="green"
+   document.getElementById("goLight").style.backgroundColor="green"
+   document.getElementById("stopbutton").style.backgroundColor="grey"
+   document.getElementById("stopLight").style.backgroundColor="grey"
+   document.getElementById("readybutton").style.backgroundColor="grey"
+   document.getElementById("readyLight").style.backgroundColor="grey"
+}
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+crossorigin="anonymous"></script>
+</body>
+</html>
